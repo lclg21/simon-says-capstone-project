@@ -9,18 +9,42 @@
   </head>
   <body>
     <main>
-      <!--TODO: Add the missing information in the h1 heading -->
-      <h1></h1>
+      <h1 class="js-heading">Simon Says</h1>
+
+      <section class="js-skills-section">
+        <label for="js-dropdown" class="skill-label js-skill-label">Choose a skill level:</label>
+        <select name="skill-levels" class="skill-dropdown js-skill-dropdown" id="js-dropdown">
+          <option value="0">-- Select level -- </option>
+          <option value="1"> Level 1 </option>
+          <option value="2"> Level 2 </option>
+          <option value="3"> Level 3 </option>
+          <option value="4"> Level 4 </option>
+        </select>
+
+        <ul class="skill-description js-skill-description">
+          <li>Level 1: <span>Beginner (8 sequences)</span></li>
+          <li>Level 2: <span>Intermediate (14 sequences)</span></li>
+          <li>Level 3: <span>Advanced (20 sequences)</span></li>
+          <li>Level 4: <span>Expert (31 sequences)</span></li>
+        </ul> 
+      </section>
 
       <section class="game-controls">
-        <!--TODO: Add the start button -->
+        <button class="start-button hidden js-start-button">start <span class="start-button-level-info hidden js-start-button-level-info"></span></button>
         <span class="status hidden js-status"></span>
       </section>
 
-      <section class="pad-container unclickable js-pad-container">
+      <section class="pad-container hidden unclickable js-pad-container">
         <div class="pad pad-red js-pad-red" data-color="red"></div>
-        <!--TODO: Add the missing pads -->
+        <div class="pad pad-green js-pad-green" data-color="green"></div>
+        <div class="pad pad-blue js-pad-blue" data-color="blue"></div>
+        <div class="pad pad-yellow js-pad-yellow" data-color="yellow"></div>
       </section>
+
+      <section class="instructions-link">
+        <button class="change-skills-button hidden js-change-skills-button">Change Skill Level</button>
+      </section>
+
     </main>
     <script src="./src/index.js"></script>
   </body>
